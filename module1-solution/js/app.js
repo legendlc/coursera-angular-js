@@ -14,7 +14,7 @@
 		}
 
 		function check_lunch(lunch){
-			var arr = lunch.split(';');
+			var arr = lunch.split(',');
 			var count = 0;
 			for(var i = 0; i < arr.length; i++){
 				if(arr[i].trim() != "")
