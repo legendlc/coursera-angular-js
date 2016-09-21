@@ -8,9 +8,9 @@
 
 	app.service("check_item", function(){
 		// data
-		this.tobuy = [{name: "cookie", quantity: 10}, {name: "orange", quantity: 5},
-			 {name: "apple", quantity: 6}, {name: "egg", quantity: 12},
-			 {name: "chocolate", quantity: 5}, {name: "banana", quantity: 10}];
+		this.tobuy = [{name: "cookies", quantity: 10}, {name: "oranges", quantity: 5},
+			 {name: "apples", quantity: 6}, {name: "eggs", quantity: 12},
+			 {name: "chocolates", quantity: 5}, {name: "bananas", quantity: 10}];
 		this.bought = [];
 
 		this.func = function(index){

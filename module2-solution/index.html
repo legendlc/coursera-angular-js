@@ -4,6 +4,7 @@
     <title>Shopping List Check Off</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/plural.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
@@ -23,7 +24,7 @@
         color: green;
       }
       .to_buy_item {
-        width: 100px;
+        width: 150px;
         display: inline-block;
       }
     </style>
@@ -39,7 +40,7 @@
       <h2>To Buy:</h2>
       <ul>
         <li ng-repeat="i in tobuy">
-          <span class="to_buy_item">{{i.quantity}} {{" " + i.name}}</span>
+          <span class="to_buy_item">{{"Buy "}} {{i.quantity}} {{" " + i.name}}</span>
           <button class="btn btn-default" ng-click="check($index)">
             <span class="glyphicon glyphicon-ok"></span>
             Bought
@@ -54,7 +55,7 @@
      <h2>Already Bought:</h2>
      <ul>
         <li ng-repeat="i in bought">
-          <span class="bought_item">{{i.quantity}} {{" " + i.name}}</span>
+          <span class="bought_item">{{"Bought "}} {{i.quantity}} {{" " + i.name}}</span>
         </li>
      </ul>
      <div class="emptyMessage" ng-show="bought.length == 0">Nothing bought yet.</div>
